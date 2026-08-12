@@ -1,9 +1,3 @@
-# Wonder Games — Studio Site
-
-A one-page, scroll-driven arcade site for a game design & dev studio.
-Dark/neon CRT aesthetic, GSAP ScrollTrigger reveals, an R3F hero scene,
-a custom cursor, and a bunch of game-UI HUD flourishes (FPS counter,
-Player 1 badge, loading screen, "insert coin" CTA, etc.).
 
 ## Stack
 

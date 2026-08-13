@@ -5,6 +5,7 @@ import Image from "next/image";
 import clsx from "clsx";
 import { gsap } from "@/lib/gsap";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
+import Button from "@/components/atoms/Button";
 
 // object-position per image: bo7's cover art is a tall poster whose vertical
 // center is the darkest part (near-black gear), which was blending into the
@@ -87,6 +88,16 @@ export default function Pitch() {
             </div>
           ))}
         </div>
+      </div>
+
+      <div className="mt-14 flex justify-center">
+        <Button
+          variant="solid"
+          accent="cyan"
+          onClick={() => window.open("https://catalogo-one-orpin.vercel.app/", "_blank", "noopener")}
+        >
+          Ver Catálogo
+        </Button>
       </div>
     </section>
   );

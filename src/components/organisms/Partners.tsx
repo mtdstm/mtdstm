@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { gsap, ScrollTrigger } from "@/lib/gsap";
+import { gsap } from "@/lib/gsap";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { partners } from "@/data/misc";
 
@@ -21,10 +21,7 @@ export default function Partners() {
         ease: "power2.out",
       });
     }, rootRef);
-    return () => {
-      ctx.revert();
-      ScrollTrigger.getAll().forEach((t) => t.refresh());
-    };
+    return () => ctx.revert();
   }, [reduced]);
 
   return (

@@ -38,7 +38,7 @@
   --font-pixel: var(--font-pixel);
 
   --animate-marquee: marquee 28s linear infinite;
-  --animate-marquee-reverse: marquee-reverse 45s linear infinite;
+  --animate-marquee-reverse: marquee-reverse 90s linear infinite;
   --animate-blink: blink 1.4s steps(1) infinite;
   --animate-scan: scan 6s linear infinite;
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { gsap, ScrollTrigger } from "@/lib/gsap";
+import { gsap } from "@/lib/gsap";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { projects } from "@/data/projects";
 import ProjectCard from "@/components/molecules/ProjectCard";
@@ -24,10 +24,7 @@ export default function Work() {
         });
       });
     }, rootRef);
-    return () => {
-      ctx.revert();
-      ScrollTrigger.getAll().forEach((t) => t.refresh());
-    };
+    return () => ctx.revert();
   }, [reduced]);
 
   return (

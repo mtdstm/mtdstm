@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import clsx from "clsx";
-import { gsap, ScrollTrigger } from "@/lib/gsap";
+import { gsap } from "@/lib/gsap";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 // object-position per image: bo7's cover art is a tall poster whose vertical
@@ -11,8 +11,16 @@ import { useReducedMotion } from "@/hooks/useReducedMotion";
 // site's near-black background under object-cover's default center crop —
 // pin it to the top instead, where the lit face/eyes read against the dark.
 const MARQUEE_ITEMS = [
-  { src: "/images/fz6.jpeg", position: "object-center" },
-  { src: "/images/bo7.jpeg", position: "object-top" },
+  { src: "/images/fz.png", position: "object-center" },
+  { src: "/images/bo7.jpeg", position: "object-center" },
+  { src: "/images/gta-v2.jpeg", position: "object-center" },
+  { src: "/images/nba.jpeg", position: "object-center" },
+  { src: "/images/fc6.jpeg", position: "object-center" },
+  { src: "/images/fc.jpeg", position: "object-center" },
+  { src: "/images/punk.jpeg", position: "object-center" },
+  { src: "/images/ac.jpeg", position: "object-center" },
+  { src: "/images/spider.jpeg", position: "object-center" },
+  { src: "/images/blade.jpeg", position: "object-center" },
 ];
 
 // Repeated enough times that the track stays wider than any viewport —
@@ -36,10 +44,7 @@ export default function Pitch() {
         ease: "power3.out",
       });
     }, rootRef);
-    return () => {
-      ctx.revert();
-      ScrollTrigger.getAll().forEach((t) => t.refresh());
-    };
+    return () => ctx.revert();
   }, [reduced]);
 
   return (
@@ -69,14 +74,15 @@ export default function Pitch() {
           {[...MARQUEE_IMAGES, ...MARQUEE_IMAGES].map(({ src, position }, i) => (
             <div
               key={`${src}-${i}`}
-              className="relative h-32 w-56 shrink-0 overflow-hidden border border-line bg-panel sm:h-44 sm:w-80"
+              className="relative h-50 w-64 shrink-0 overflow-hidden border border-line bg-panel sm:h-82 sm:w-96"
             >
               <Image
                 src={src}
                 alt=""
                 fill
-                sizes="(max-width: 640px) 224px, 320px"
+                sizes="(max-width: 640px) 256px, 384px"
                 className={clsx("object-cover", position)}
+                priority={i === 0}
               />
             </div>
           ))}

@@ -29,14 +29,13 @@ export default function Partners() {
       <div className="mx-auto max-w-6xl">
         <div className="mb-12 text-center">
           <span className="font-pixel text-[9px] uppercase tracking-[0.4em] text-lime">
-            Co-op Mode
+            STM
           </span>
           <h2 className="mt-3 font-display text-3xl font-black tracking-wide text-fg sm:text-5xl">
-            Studios We Level Up With
+          MELHOR BIBLIOTECA DE JOGOS
           </h2>
           <p className="mx-auto mt-4 max-w-xl font-body text-sm text-muted sm:text-base">
-            Proudly building alongside teams shipping the games players
-            actually talk about.
+            O método STM é a melhor opção para quem quer ter acesso a uma biblioteca de jogos completa e atualizada, com um único pagamento. Seja um dos nossos parceiros e tenha acesso a uma biblioteca de jogos completa e atualizada.
           </p>
         </div>
 

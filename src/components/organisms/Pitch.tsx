@@ -86,11 +86,14 @@ export default function Pitch() {
                 priority={i === 0}
               />
             </div>
-          ))}
+          ))} 
         </div>
       </div>
-
-      <div className="mt-14 flex justify-center">
+          
+      <div className="mt-24 flex flex-col items-center gap-4">
+        <span className="pitch-line font-pixel text-[9px] uppercase tracking-[0.4em] text-cyan">
+          Mais jogos
+        </span>
         <Button
           variant="solid"
           accent="cyan"

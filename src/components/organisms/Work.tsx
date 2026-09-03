@@ -3,8 +3,6 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "@/lib/gsap";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
-import { projects } from "@/data/projects";
-import ProjectCard from "@/components/molecules/ProjectCard";
 
 export default function Work() {
   const rootRef = useRef<HTMLDivElement>(null);
@@ -36,19 +34,22 @@ export default function Work() {
               Mission Log
             </span>
             <h2 className="mt-3 font-display text-3xl font-black tracking-wide text-fg sm:text-5xl">
-              Catalogo de Jogos
+              Tutorial
             </h2>
           </div>
           <p className="max-w-sm font-body text-sm text-muted">
-            Eight builds, zero filler. Each one shipped with the same
-            obsession over motion, performance, and feel.
+            Aprenda a usar o método STM, como funciona, e como ele pode te ajudar a ter acesso a uma biblioteca de jogos completa e atualizada.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.map((p) => (
-            <ProjectCard key={p.id} project={p} />
-          ))}
+        <div className="project-card relative mx-auto flex aspect-video w-full max-w-4xl flex-col items-center justify-center overflow-hidden border border-line bg-panel bg-noise-panel">
+          <video
+            className="absolute inset-0 h-full w-full object-cover"
+            src="/video/teste.mp4"
+            controls
+            playsInline
+            preload="none"
+          />
         </div>
       </div>
     </section>

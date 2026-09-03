@@ -2,21 +2,15 @@
 // Replace partner names/logos with real client wordmarks before launch.
 
 export const partners: string[] = [
-  "NOVA INTERACTIVE",
-  "REDLINE GAMES",
-  "OCTANE STUDIO",
-  "FERAL BYTE",
-  "LUNAR FORGE",
-  "GRIDLOCK",
-  "PALEBLADE",
-  "ECHO CHAMBER",
-  "IRONVEIL",
-  "SUNDER",
+  "PAGAMENTO ÚNICO",
+  "+ 44.000 JOGOS",
+  "O MELHOR MÉTODO",
+  "QUALIDADE GARANTIDA",
+  "ACESSO IMEDIATO",
+  "GAMEPLAY SEM LIMITES",
+  "4K E FULL HD",
+  "ACESSO A TODOS OS JOGOS",
+  "MELHOR CUSTO BENEFÍCIO",
+  "ATUALIZAÇÃO CONSTANTE",
 ];
 
-export const navLinks = [
-  { label: "Work", href: "#work" },
-  { label: "Studio", href: "#pitch" },
-  { label: "Partners", href: "#partners" },
-  { label: "Contact", href: "#footer" },
-];
